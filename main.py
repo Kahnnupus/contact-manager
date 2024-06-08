@@ -1,3 +1,5 @@
+from contacts.contact_manager import *
+
 def menu():
     while True:
         opcao = input("\n[Gerenciamento de Contatos]\n\nOpções:\n\n [1] Adicionar\n [2] Listar\n [3] Remover\n [4] Sair\n\nDigite a opção: ")
@@ -16,13 +18,14 @@ def main():
 
         if opcao == 1:
             print("\n1 - adicionar")
-            
+            adicionar()
         elif opcao == 2:
             print("\n2 - listar")
-            
+            listar()
         elif opcao == 3:
             print("\n3 - remover")
-            
+            telefone = input("Digite o telefone que deseja remover: ")
+            remover(telefone)
         elif opcao == 4:
             print("\nSistema finalizado!")
             return False
